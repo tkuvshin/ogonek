@@ -1,4 +1,4 @@
-python-telegram-bot====<latest_version> # Например, 21.0 или 22.0
+python-telegram-bot==<latest_version> # Например, 21.0 или 22.0
 openai==1.30.1  # Попробуйте более старую версию openai, которая может использовать httpx 0.26.x
 aiohttp
 fastapi==0.111.0
