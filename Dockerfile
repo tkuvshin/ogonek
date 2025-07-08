@@ -1,4 +1,4 @@
-FROM python:3.10-slim # Или python:3.9-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -14,9 +14,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
+RUN cat requirements.txt # <-- ДОБАВЬТЕ ЭТУ СТРОКУ
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
 
 CMD ["python", "main.py"]
+
 
